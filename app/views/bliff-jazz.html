@@ -1,0 +1,72 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Poo,Pee,Doo,Dee,Wah
+{% endblock %}
+
+
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="{{returnTo}}">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl">Bliff Jazz</h1>
+
+      <form class="form" action="/blaff-jazz" method="post">
+
+        <p>
+
+
+
+          <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset">
+              <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                <h2 class="govuk-fieldset__heading">
+                  Where is jazz?
+                </h2>
+              </legend>
+              <div class="govuk-radios">
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="where-is-jazz" name="where-is-jazz" type="radio" value="Jazzland" {{ checked("where-is-jazz", "Jazzland") }}>
+                  <label class="govuk-label govuk-radios__label" for="where-is-jazz">
+                    Jazzland
+                  </label>
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="where-is-jazz-2" name="where-is-jazz" type="radio" value="Scotland" {{ checked("where-is-jazz", "Scotland") }}>
+                  <label class="govuk-label govuk-radios__label" for="where-is-jazz-2">
+                    Scotland
+                  </label>
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="where-is-jazz-3" name="where-is-jazz" type="radio" value="Hove" {{ checked("where-is-jazz", "Hove") }}>
+                  <label class="govuk-label govuk-radios__label" for="where-is-jazz-3">
+                    Hove
+                  </label>
+                </div>
+                
+              </div>
+          
+            </fieldset>
+          </div>
+
+
+
+
+        </p>
+
+        <p>[See <a href="https://design-system.service.gov.uk">the GOV.UK Design System</a> for examples]</p>
+
+        <button class="govuk-button" data-module="govuk-button">Continue</button>
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}
